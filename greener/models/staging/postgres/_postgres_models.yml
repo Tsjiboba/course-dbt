@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: stg_orders
+    description: Demographics about each superhero such as name, hair color, height and weight.
+  - name: stg_adresses
+    description: Demographics about each superhero such as name, hair color, height and weight.
+  - name: stg_events
+    description: Demographics about each superhero such as name, hair color, height and weight.
+  - name: stg_order_items
+    description: Demographics about each superhero such as name, hair color, height and weight.
+  - name: stg_products
+    description: Demographics about each superhero such as name, hair color, height and weight.
+  - name: stg_promos
+    description: Demographics about each superhero such as name, hair color, height and weight.
+  - name: stg_users
+    description: Demographics about each superhero such as name, hair color, height and weight.
