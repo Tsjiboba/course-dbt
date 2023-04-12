@@ -4,7 +4,5 @@
   )
 }}
 
-SELECT order_id
-, CAST(created_at AS TIMESTAMP) as created_time
-, order_total
+SELECT *
 FROM {{ source('postgres', 'orders') }}
