@@ -33,3 +33,28 @@ FROM DEV_DB.DBT_RICOBOUWMANSMOLLIECOM.STG_ORDERS)
 SELECT AVG(delivery_hours) from DELIVERY_HOURS
 
 Q: How many users have only made one purchase? Two purchases? Three+ purchases?
+1: 25
+2: 28
+3: 89
+
+WITH total AS (SELECT user_id, count(*) as count_orders  FROM DEV_DB.DBT_RICOBOUWMANSMOLLIECOM.STG_ORDERS 
+group by 1 
+)
+
+SELECT count_orders, count(*) FROM total
+group by 1
+order by 1 desc
+
+Q: On average, how many unique sessions do we have per hour?
+16.3
+WITH session_per_hour AS (
+SELECT 
+    date_trunc(hour,created_at) AS hour,
+    count(distinct session_id) AS sessions
+from DEV_DB.DBT_RICOBOUWMANSMOLLIECOM.STG_EVENTS
+group by 1 
+)
+
+select 
+    avg(sessions) as avg_hourly_sessions 
+from session_per_hour
