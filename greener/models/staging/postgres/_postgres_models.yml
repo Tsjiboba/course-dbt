@@ -3,6 +3,9 @@ version: 2
 models:
   - name: stg_orders
     description: Demographics about each superhero such as name, hair color, height and weight.
+    test:
+      - unique
+      - not_null
   - name: stg_adresses
     description: Demographics about each superhero such as name, hair color, height and weight.
   - name: stg_events
