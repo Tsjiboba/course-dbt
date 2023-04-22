@@ -4,5 +4,5 @@
   )
 }}
 
-SELECT *
+SELECT * 
 FROM {{ source('postgres', 'events') }}

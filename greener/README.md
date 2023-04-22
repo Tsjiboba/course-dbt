@@ -58,3 +58,24 @@ group by 1
 select 
     avg(sessions) as avg_hourly_sessions 
 from session_per_hour
+
+## PROJECT WEEK 2
+Q:What is our user repeat rate?
+A: WITH orders AS (SELECT USER_ID
+, CASE WHEN COUNT(*) >= 2 THEN 1 ELSE 0 END AS two_orders
+, COUNT(*) as orders
+FROM DEV_DB.DBT_RICOBOUWMANSMOLLIECOM.STG_ORDERS
+GROUP BY 1
+ORDER BY 3 DESC)
+
+SELECT SUM(TWO_ORDERS)/ SUM(ORDERS) AS repeat_rate
+FROM orders
+
+0.27
+
+Q:What are good indicators of a user who will likely purchase again? What about indicators of users who are likely NOT to purchase again? If you had more data, what features would you want to look into to answer this question?
+A: Good indicators could be:
+    - satisfactory metrics regarding website products(through marketing trackings)
+    - positive customer support
+    - checkout experience. Maybe we could find that a lot of customers drop off the moment they add the products to their checkout, or the payment checkout fails
+    - 

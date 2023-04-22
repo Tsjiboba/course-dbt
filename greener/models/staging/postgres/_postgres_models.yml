@@ -18,3 +18,11 @@ models:
     description: Demographics about each superhero such as name, hair color, height and weight.
   - name: stg_users
     description: Demographics about each superhero such as name, hair color, height and weight.
+  - name: page_views
+    description: intermediate check
+  - name: int_page_views
+    description: final table coming from intermate check 
+  - name: users
+    description: users tabel
+  - name: orders
+    description: orders table
