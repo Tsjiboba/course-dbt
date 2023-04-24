@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: active_promos
+    description: users table
+    test:
+      - unique
+      - not_null
+
+    

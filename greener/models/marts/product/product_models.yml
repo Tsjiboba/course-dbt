@@ -1,0 +1,7 @@
+version: 2
+
+models:
+  - name: page_views
+    description: intermediate check
+  - name: int_page_views
+    description: final table coming from intermate check 

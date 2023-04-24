@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: users
+    description: users table
+    test:
+      - unique
+      - not_null
+  - name: orders
+    description: orders table
+    columns:
+      - name: order_total
+        tests:
+          - positive_values
+    test:
+      - unique
+      - not_null
+
+    

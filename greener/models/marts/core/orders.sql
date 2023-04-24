@@ -15,7 +15,7 @@ FROM {{ ref('stg_order_items') }})
 , products as (SELECT *
 FROM {{ ref('stg_products') }})
 
-SELECT o.order_id
+SELECT o.*
 , oi.product_id
 , p.name
 FROM ORDERS O
