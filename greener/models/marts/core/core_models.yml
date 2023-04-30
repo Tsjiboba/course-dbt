@@ -15,5 +15,11 @@ models:
     test:
       - unique
       - not_null
+  - name: conversion_rate
+    description: conversion_rate table
+    tests:
+       - dbt_expectations.name_of_my_expectation
+  - name: conversion_rate_pp
+    description: conversion_rate table per product
 
     

@@ -1,0 +1,5 @@
+version: 2
+
+macros:
+  - name: event_types_agg
+    description: use macro to get aggregation of event types
